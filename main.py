@@ -2,9 +2,14 @@ from telethon import TelegramClient, events
 from telethon.tl.functions.messages import ImportChatInviteRequest
 from telethon.tl.functions.channels import JoinChannelRequest
 from re import sub
+from os import getenv
+from dotenv import load_dotenv
 
-api_id = 1112540
-api_hash = '01571286ad8be99aecd2d6cdc9f7c4e9'
+load_dotenv()
+
+api_id = getenv("API_ID")
+api_hash = getenv("API_HASH")
+print(api_id, api_hash)
 client = TelegramClient('Rhons', api_id, api_hash)
 
 async def main():
