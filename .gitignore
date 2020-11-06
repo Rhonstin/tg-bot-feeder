@@ -1,3 +1,4 @@
 *.session
 .env
 TODO.list
+app.yml
